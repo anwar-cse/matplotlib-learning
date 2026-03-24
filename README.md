@@ -9,10 +9,9 @@ This repository contains my step-by-step learning of **Matplotlib** for data vis
 | Module | Topic |
 |--------|------|
 | [Module1.1](Module1.1/) | Introduction to Matplotlib |
-| [Module1.2](Module1.2/) | Line Chart |
-| [Module1.3](Module1.3/) | Bar Chart & Histogram |
-| [Module1.4](Module1.4/) | Pie Chart & Subplot |
-| [Module1.5](Module1.5/) | Scatter Plot |
+| [Module1.2](Module1.2/) | Bar Chart & Histogram |
+| [Module1.3](Module1.3/) | Pie Chart & Subplot |
+| [Module1.4](Module1.4/) | Scatter Plot |
 
 ---
 
