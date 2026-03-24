@@ -1,0 +1,81 @@
+ Matplotlib Introduction + Basic Graph
+
+    📌 Matplotlib কি?
+
+            👉 Matplotlib হলো Python-এর graph/plot library
+
+            👉 এটা দিয়ে আমরা:
+                            Line chart
+                            Bar chart
+                            Histogram
+                            Pie chart
+
+            👉 সহজভাবে:
+                         Matplotlib = Data কে graph এ দেখানো
+
+    📌 Install
+                pip install matplotlib
+
+    📌 Import
+            import matplotlib.pyplot as plt
+            👉 plt = shortcut
+
+    📌 1. Basic Line Chart ⭐
+                import matplotlib.pyplot as plt
+
+                x = [1, 2, 3, 4]
+                y = [10, 20, 25, 30]
+
+                plt.plot(x, y)
+                plt.show()
+
+       👉 এটা একটা simple line graph দেখাবে
+
+    📌 2. Title + Labels
+                plt.plot(x, y)
+                plt.title("Simple Line Chart")
+                plt.xlabel("X Axis")
+                plt.ylabel("Y Axis")
+
+                plt.show()
+
+    📌 3. Style change
+                plt.plot(x, y, linestyle="--", marker="o")
+                plt.show()
+
+                👉 dashed line + point দেখাবে
+
+    📌 4. Multiple Line
+                y2 = [15, 18, 22, 28]
+
+                plt.plot(x, y)
+                plt.plot(x, y2)
+                plt.show()
+
+    📌 5. Legend (label)
+                plt.plot(x, y, label="Data1")
+                plt.plot(x, y2, label="Data2")
+
+                plt.legend()
+                plt.show()
+
+    🎯 Mini Practice
+            import matplotlib.pyplot as plt
+
+            x = [1,2,3]
+            y = [5,10,15]
+
+            plt.plot(x,y)
+            plt.title("My First Graph")
+            plt.show()
+
+    ⚠️ Important Tips
+            plot() → line graph
+            show() → graph display
+            label দিলে legend use করো
+
+    📌 Summary
+            matplotlib → graph library
+            plt.plot() → line chart
+            title(), xlabel(), ylabel()
+            legend()
