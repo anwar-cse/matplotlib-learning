@@ -1,0 +1,94 @@
+    Bar Chart + Histogram
+    📊 1. Bar Chart (সবচেয়ে common) ⭐
+
+        👉 category data দেখাতে use হয়
+        👉 যেমন: student marks, product sales
+
+    📌 Basic Bar Chart
+            import matplotlib.pyplot as plt
+
+            names = ["A", "B", "C", "D"]
+            marks = [80, 60, 90, 70]
+
+            plt.bar(names, marks)
+            plt.show()
+            
+    📌 Title + Labels
+            plt.bar(names, marks)
+
+            plt.title("Student Marks")
+            plt.xlabel("Students")
+            plt.ylabel("Marks")
+            plt.show()
+
+    📌 Bar Style (width)
+            plt.bar(names, marks, width=0.5)
+            plt.show()
+
+    📊 2. Horizontal Bar Chart
+            plt.barh(names, marks)
+            plt.show()
+
+            👉 পাশে পাশেও দেখাতে পারো
+      
+    📊 3. Histogram ⭐ (Data Distribution)
+
+        👉 data কিভাবে spread হয়েছে সেটা দেখায়
+
+        📌 Basic Histogram
+                import numpy as np
+
+                data = np.array([10,20,20,30,30,30,40,50])
+
+                plt.hist(data)
+                plt.show()
+
+        📌 Bins (group control)
+                plt.hist(data, bins=5)
+                plt.show()
+
+                👉 bins = কয়টা ভাগে data ভাগ হবে
+
+                Note:
+                        Example বুঝো
+                        👉 data range: 10 → 5
+                        👉 bins=5 দিলে:
+                                        10-18
+                                        18-26
+                                        26-34
+                                        34-42
+                                        42-50
+                        👉 এখন প্রতিটা range এ কয়টা value আছে সেটা count হবে
+
+    📊 Histogram Real Meaning
+
+            👉 example:
+                    marks distribution
+                    age distribution
+                    income Distribution
+
+    🎯 Mini Practice
+                    import matplotlib.pyplot as plt
+
+                    # bar chart
+                    x = ["Python", "Java", "C++"]
+                    y = [50, 30, 20]
+
+                    plt.bar(x, y)
+                    plt.show()
+
+                    # histogram
+                    data = [1,2,2,3,3,3,4,5]
+                    plt.hist(data)
+                    plt.show()
+
+    ⚠️ Important Tips
+                bar → category compare
+                histogram → distribution
+                bins adjust করলে graph clear হয়
+
+    📌 Summary
+            bar() → vertical bar
+            barh() → horizontal
+            hist() → distribution
+            bins → grouping
