@@ -1,0 +1,92 @@
+ Scatter Plot + Real Data Visualization
+
+    📊 1. Scatter Plot কি?
+
+            👉 দুইটা variable এর relation দেখায়
+            👉 যেমন:
+
+            Height vs Weight
+            Study time vs Marks
+
+            👉 ML এ pattern বুঝতে use হয়
+
+    📌 Basic Scatter Plot
+            import matplotlib.pyplot as plt
+
+            x = [1,2,3,4,5]
+            y = [10,20,25,30,40]
+
+            plt.scatter(x, y)
+            plt.show()
+
+    📌 Title + Labels
+            plt.scatter(x, y)
+
+            plt.title("Study vs Marks")
+            plt.xlabel("Study Hours")
+            plt.ylabel("Marks")
+
+            plt.show()
+
+    📊 2. Marker Size Change
+            plt.scatter(x, y, s=100)
+            plt.show()
+
+            👉 s = size
+
+    📊 3. Multiple Data Scatter
+            x1 = [1,2,3]
+            y1 = [10,15,20]
+
+            x2 = [1,2,3]
+            y2 = [20,25,30]
+
+            plt.scatter(x1, y1, label="Group1")
+            plt.scatter(x2, y2, label="Group2")
+
+            plt.legend()
+            plt.show()
+
+    📊 4. Real ML Example ⭐
+
+                👉 Study Hour vs Marks
+
+                hours = [1,2,3,4,5,6]
+                marks = [20,30,50,60,70,90]
+
+                plt.scatter(hours, marks)
+
+                plt.xlabel("Study Hours")
+                plt.ylabel("Marks")
+                plt.title("Study vs Marks")
+
+                plt.show()
+
+                👉 এখানে relation দেখা যায়
+                👉 বেশি পড়লে → বেশি marks 📈
+
+    📊 5. Grid add করা
+                plt.scatter(hours, marks)
+                plt.grid()
+                plt.show()
+
+    🎯 Mini Practice
+                import matplotlib.pyplot as plt
+
+                x = [5,10,15,20]
+                y = [50,60,70,80]
+
+                plt.scatter(x,y)
+                plt.title("Example")
+                plt.show()
+
+    ⚠️ Important Tips
+                scatter → relation বুঝার জন্য
+                ML model এর আগে visualization important
+                pattern দেখো (linear / non-linear)
+
+    📌 Summary
+            scatter() → relation graph
+            s → size
+            legend() → multiple data
+            grid() → clear view
