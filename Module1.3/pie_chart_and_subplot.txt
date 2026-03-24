@@ -1,0 +1,111 @@
+Pie Chart + Subplot
+
+    🥧 1. Pie Chart (percentage show) ⭐
+
+            👉 কোন অংশ কত % — এটা দেখাতে use হয়
+            👉 যেমন: market share, result distribution
+
+    📌 Basic Pie Chart
+            import matplotlib.pyplot as plt
+
+            labels = ["A", "B", "C"]
+            sizes = [40, 35, 25]
+
+            plt.pie(sizes, labels=labels)
+            plt.show()
+
+    📌 Percentage show
+            plt.pie(sizes, labels=labels, autopct="%1.1f%%")
+            plt.show()
+
+            👉 % দেখাবে
+
+            NOte:
+                autopct="%1.1f%%" মানে কী?
+
+                👉 এটা percentage format করার জন্য ব্যবহার হয়
+
+                ভেঙে বুঝি:
+                % → formatting start
+                1.1f → float number (decimal সহ)
+                1 = minimum digit
+                .1 = decimal এর পর ১টা digit
+                %% → actual % sign show করার জন্য
+
+
+    📌 Highlight (explode) ⭐
+
+            explode মানে কী?
+                    👉 Pie chart-এর কোনো অংশকে বাইরে বের করে highlight করা
+
+            explode = [0, 0.1, 0]
+            plt.pie(sizes, labels=labels, autopct="%1.1f%%", explode=explode)
+            plt.show()
+
+         👉 মাঝেরটা বের হয়ে থাকবে
+
+    📊 2. Subplot (multiple graph একসাথে)
+
+            👉 এক figure-এ multiple graph দেখানো
+
+            📌 Basic Subplot
+                    import matplotlib.pyplot as plt
+
+                    # 1st graph
+                    plt.subplot(1,2,1)
+                    plt.plot([1,2,3],[10,20,30])
+                    plt.title("Line")
+
+                    # 2nd graph
+                    plt.subplot(1,2,2)
+                    plt.bar(["A","B"], [5,7])
+                    plt.title("Bar")
+
+                    plt.show()
+
+                    👉 format:
+
+                    subplot(row, column, position)
+
+            📌 2x2 Subplot
+                    plt.subplot(2,2,1)
+                    plt.plot([1,2],[3,4])
+
+                    plt.subplot(2,2,2)
+                    plt.bar(["A","B"],[5,6])
+
+                    plt.subplot(2,2,3)
+                    plt.pie([50,50])
+
+                    plt.subplot(2,2,4)
+                    plt.hist([1,2,2,3])
+
+                    plt.show()
+
+    🎯 Mini Practice
+                import matplotlib.pyplot as plt
+
+                # pie
+                plt.pie([60,40], labels=["Pass","Fail"], autopct="%1.1f%%")
+                plt.show()
+
+                # subplot
+                plt.subplot(1,2,1)
+                plt.plot([1,2,3],[2,4,6])
+
+                plt.subplot(1,2,2)
+                plt.bar(["X","Y"],[5,8])
+
+                plt.show()
+                
+    ⚠️ Important Tips
+                pie → percentage data
+                explode → highlight
+                subplot → dashboard style
+                position ঠিক রাখতে হবে
+
+    📌 Summary
+                pie() → pie chart
+                autopct → percentage
+                explode → highlight
+                subplot() → multiple graph
